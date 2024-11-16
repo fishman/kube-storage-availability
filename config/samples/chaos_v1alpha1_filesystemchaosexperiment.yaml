@@ -1,0 +1,9 @@
+apiVersion: chaos.com.softsage.storagechaos/v1alpha1
+kind: FileSystemChaosExperiment
+metadata:
+  labels:
+    app.kubernetes.io/name: kube-storage-availability
+    app.kubernetes.io/managed-by: kustomize
+  name: filesystemchaosexperiment-sample
+spec:
+  # TODO(user): Add fields here

@@ -1,0 +1,27 @@
+# permissions for end users to edit filesystemchaosexperiments.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: kube-storage-availability
+    app.kubernetes.io/managed-by: kustomize
+  name: filesystemchaosexperiment-editor-role
+rules:
+- apiGroups:
+  - chaos.com.softsage.storagechaos
+  resources:
+  - filesystemchaosexperiments
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - chaos.com.softsage.storagechaos
+  resources:
+  - filesystemchaosexperiments/status
+  verbs:
+  - get
